@@ -10,6 +10,7 @@ IMAGE_INSTALL:append = " \
     usbinit \
     i2c-tools \
     libgpiod \
+    evtest \
     "
 
 IMAGE_FEATURES:append = " \
