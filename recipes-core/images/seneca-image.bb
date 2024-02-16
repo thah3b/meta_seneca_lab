@@ -1,9 +1,16 @@
 SUMMARY = "This is a base image created as example for courses"
-inherit core-image
 
 IMAGE_LINGUAS = " "
 
 LICENSE = "MIT"
+
+inherit core-image
+
+export IMAGE_BASENAME = "Seneca-Custom-Image"
+MACHINE_NAME ?= "${MACHINE}"
+IMAGE_NAME = "${MACHINE_NAME}_${IMAGE_BASENAME}"
+
+IMAGE_INSTALL:append = " kernel-devsrc"
 
 IMAGE_INSTALL:append = " \
     usbutils \
@@ -11,6 +18,7 @@ IMAGE_INSTALL:append = " \
     i2c-tools \
     libgpiod \
     evtest \
+    pmu-mod \
     "
 
 IMAGE_FEATURES:append = " \
