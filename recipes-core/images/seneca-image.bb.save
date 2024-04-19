@@ -18,9 +18,8 @@ IMAGE_INSTALL:append = " \
     i2c-tools \
     libgpiod \
     evtest \
-    pmu-mod \
-    gstreamer1.0-plugins-good \
-    v4l-utils \
+    pmu-mod 
+		\
     "
 
 IMAGE_FEATURES:append = " \
